@@ -2,11 +2,10 @@ const fs = require('fs');
 const path = require('path');
 
 // 定义路径和变量
-// const filepath = process.argv[2]; // 从命令行参数获取
-const filePath = "D:/anime/[愛戀字幕社][4月新番][百合是我的工作！][watashi no Yuri wa oshigoto desu!][720P][MP4][BIG5][繁中].mp4";
+const filePath = process.argv[2];
 const videoName = path.basename(filePath);
-const configPath = "./";
-const mediaPath = "D:\\result";
+const configPath = "./"; // 如果console.txt和rename.txt都在这个文件夹内，这个就不用改
+const mediaPath = "D:\\result";// 文件最终移动到的文件夹
 
 /**
  * 定义函数以写入 console.txt
