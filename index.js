@@ -3,7 +3,7 @@ const path = require('path');
 
 // 定义路径和变量
 // const filepath = process.argv[2]; // 从命令行参数获取
-const filePath = "D:/anime/[愛戀字幕社][4月新番][百合是我的工作！][watashi no Yuri wa oshigoto desu!][30][720P][MP4][BIG5][繁中].mp4";
+const filePath = "D:/anime/[愛戀字幕社][4月新番][百合是我的工作！][watashi no Yuri wa oshigoto desu!][720P][MP4][BIG5][繁中].mp4";
 const videoName = path.basename(filePath);
 const configPath = "./";
 const mediaPath = "D:\\result";
@@ -13,7 +13,7 @@ const mediaPath = "D:\\result";
  * @param text
  */
 function writeConsole(text) {
-    const timestamp = new Date().toISOString().replace(/T/, ' ').replace(/\..+/, ''); // 删除 'T' 和毫秒
+    const timestamp = new Date().toLocaleString().replace(/T/, ' ').replace(/\..+/, ''); // 删除 'T' 和毫秒
     const filePath = path.join(configPath, 'console.txt');
     fs.appendFileSync(filePath, `${timestamp}: ${text}\n`, 'utf8');
 }
@@ -40,7 +40,7 @@ function extractEpisodeNumber(title) {
     }
 
     // 如果所有方法都失败了，返回一个错误消息
-    return "No episode number found.";
+    return false;
 }
 
 /**
@@ -81,7 +81,7 @@ function hasOrIsFolder(allPath) {
 
 
 // 开始逻辑部分
-writeConsole("-------------------");
+writeConsole("---------------------------------------------------------");
 writeConsole(JSON.stringify(process.argv));
 
 if (!isVideoFile(videoName)) {
@@ -92,6 +92,10 @@ writeConsole(`开始处理 ${videoName}`);
 
 // 提取集数
 let episode = extractEpisodeNumber(videoName);
+if(!episode){
+    writeConsole(`没有检测到集数，不处理`);
+    return;
+}
 writeConsole(`分辨为第${episode}集，开始下一步`);
 
 
