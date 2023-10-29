@@ -2,9 +2,9 @@ const fs = require('fs');
 const path = require('path');
 
 // 定义路径和变量
-const filePath = process.argv[2];
+const filePath = process.argv[process.argv.length - 1];
 const videoName = path.basename(filePath);
-const configPath = "./"; // 如果console.txt和rename.txt都在这个文件夹内，这个就不用改
+const configPath = path.resolve("./"); // 如果console.txt和rename.txt都在这个文件夹内，这个就不用改
 const mediaPath = "D:\\result";// 文件最终移动到的文件夹
 
 /**
@@ -91,7 +91,7 @@ writeConsole(`开始处理 ${videoName}`);
 
 // 提取集数
 let episode = extractEpisodeNumber(videoName);
-if(!episode){
+if (!episode) {
     writeConsole(`没有检测到集数，不处理`);
     return;
 }
@@ -100,10 +100,12 @@ writeConsole(`分辨为第${episode}集，开始下一步`);
 
 // 读取 rename.txt 文件和数据
 const renameText = fs.readFileSync(path.join(configPath, 'rename.txt'), 'utf-8');
+let isOk = false; // 是否匹配成功
 for (const line of renameText.split('\r\n')) {
     const [name, binder, season = '01', difference = 0] = line.split(';');
     // 如果文件名包含 name
     if (videoName.toLowerCase().includes(name.toLowerCase())) {
+        isOk = true;
         writeConsole(`被匹配上，该条记录【${line}】`);
         // 如果有差值 则将差值相减 比如动漫是27集对应S02E02 那么difference写25 就是填第一季的最后一集的集数
         if (difference) {
@@ -122,4 +124,7 @@ for (const line of renameText.split('\r\n')) {
             writeConsole(`移动完毕，从${filePath}移动到${targetPath}`);
         }
     }
+}
+if(!isOk){
+    writeConsole(`${videoName} 没有被匹配上`);
 }

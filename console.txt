@@ -2,3 +2,10 @@
 2023-10-29 08:12:53: ["C:\\Program Files\\nodejs\\node.exe","D:\\code\\nodejs_rename_anime\\index.js"]
 2023-10-29 08:12:53: 开始处理 [愛戀字幕社][4月新番][百合是我的工作！][watashi no Yuri wa oshigoto desu!][720P][MP4][BIG5][繁中].mp4
 2023-10-29 08:12:53: 没有检测到集数，不处理
+2023/10/29 17:50:02: ---------------------------------------------------------
+2023/10/29 17:50:02: ["C:\\Program Files\\nodejs\\node.exe","D:\\code\\nodejs_rename_anime\\index.js","0","0","C:\\Users\\Administrator\\Desktop\\[LoliHouse] Undead Unluck - 06 [WebRip 1080p HEVC-10bit AAC ASSx2].mkv"]
+2023/10/29 17:50:02: 不是视频文件，不处理
+2023/10/29 17:50:49: ---------------------------------------------------------
+2023/10/29 17:50:50: ["C:\\Program Files\\nodejs\\node.exe","D:\\code\\nodejs_rename_anime\\index.js","0","0","C:\\Users\\Administrator\\Desktop\\[LoliHouse] Undead Unluck - 06 [WebRip 1080p HEVC-10bit AAC ASSx2].mkv"]
+2023/10/29 17:50:52: 开始处理 [LoliHouse] Undead Unluck - 06 [WebRip 1080p HEVC-10bit AAC ASSx2].mkv
+2023/10/29 17:50:55: 分辨为第6集，开始下一步
