@@ -1,0 +1,23 @@
+2023-10-29 08:01:03: -------------------
+2023-10-29 08:01:03: ["C:\\Program Files\\nodejs\\node.exe","D:\\code\\nodejs_rename_anime\\index.js"]
+2023-10-29 08:01:03: 开始处理 [愛戀字幕社][4月新番][百合是我的工作！][watashi no Yuri wa oshigoto desu!][09][720P][MP4][BIG5][繁中].mp4
+2023-10-29 08:01:03: 分辨为第9集，开始下一步
+2023-10-29 08:01:03: 被匹配上，该条记录【Watashi no Yuri wa Oshigoto desu!;百合是我的工作;;25】
+2023-10-29 08:01:03: 重命名为 S01E0-16 - [愛戀字幕社][4月新番][百合是我的工作！][watashi no Yuri wa oshigoto desu!][09][720P][MP4][BIG5][繁中].mp4
+2023-10-29 08:01:03: 准备移动到 D:\result\百合是我的工作
+2023-10-29 08:01:03: 移动完毕，从D:/anime/[愛戀字幕社][4月新番][百合是我的工作！][watashi no Yuri wa oshigoto desu!][09][720P][MP4][BIG5][繁中].mp4移动到D:\result\百合是我的工作\S01E0-16 - [愛戀字幕社][4月新番][百合是我的工作！][watashi no Yuri wa oshigoto desu!][09][720P][MP4][BIG5][繁中].mp4
+2023-10-29 08:01:26: -------------------
+2023-10-29 08:01:26: ["C:\\Program Files\\nodejs\\node.exe","D:\\code\\nodejs_rename_anime\\index.js"]
+2023-10-29 08:01:26: 开始处理 [愛戀字幕社][4月新番][百合是我的工作！][watashi no Yuri wa oshigoto desu!][30][720P][MP4][BIG5][繁中].mp4
+2023-10-29 08:01:26: 分辨为第30集，开始下一步
+2023-10-29 08:01:26: 被匹配上，该条记录【Watashi no Yuri wa Oshigoto desu!;百合是我的工作;;25】
+2023-10-29 08:01:26: 重命名为 S01E05 - [愛戀字幕社][4月新番][百合是我的工作！][watashi no Yuri wa oshigoto desu!][30][720P][MP4][BIG5][繁中].mp4
+2023-10-29 08:01:26: 准备移动到 D:\result\百合是我的工作
+2023-10-29 08:01:54: -------------------
+2023-10-29 08:01:54: ["C:\\Program Files\\nodejs\\node.exe","D:\\code\\nodejs_rename_anime\\index.js"]
+2023-10-29 08:01:54: 开始处理 [愛戀字幕社][4月新番][百合是我的工作！][watashi no Yuri wa oshigoto desu!][30][720P][MP4][BIG5][繁中].mp4
+2023-10-29 08:01:54: 分辨为第30集，开始下一步
+2023-10-29 08:01:54: 被匹配上，该条记录【Watashi no Yuri wa Oshigoto desu!;百合是我的工作;;25】
+2023-10-29 08:01:54: 重命名为 S01E05 - [愛戀字幕社][4月新番][百合是我的工作！][watashi no Yuri wa oshigoto desu!][30][720P][MP4][BIG5][繁中].mp4
+2023-10-29 08:01:54: 准备移动到 D:\result\百合是我的工作
+2023-10-29 08:01:54: 移动完毕，从D:/anime/[愛戀字幕社][4月新番][百合是我的工作！][watashi no Yuri wa oshigoto desu!][30][720P][MP4][BIG5][繁中].mp4移动到D:\result\百合是我的工作\S01E05 - [愛戀字幕社][4月新番][百合是我的工作！][watashi no Yuri wa oshigoto desu!][30][720P][MP4][BIG5][繁中].mp4
