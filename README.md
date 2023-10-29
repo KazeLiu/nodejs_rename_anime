@@ -1,0 +1,2 @@
+# nodejs_rename_anime
+使用nodejs根据番剧名称重命名文件并放到指定文件夹目录
