@@ -1,12 +1,10 @@
 const fs = require('fs');
 const path = require('path');
-
 // 定义路径和变量
 const filePath = process.argv[process.argv.length - 1];
 const videoName = path.basename(filePath);
-const configPath = path.resolve("./"); // 如果console.txt和rename.txt都在这个文件夹内，这个就不用改
-const mediaPath = "D:\\result";// 文件最终移动到的文件夹
-
+const configPath = "D:\\Code\\nodejs_rename_anime"; // 如果console.txt和rename.txt的绝对路径
+const mediaPath = "E:\\follow anime";// 文件最终移动到的文件夹
 /**
  * 定义函数以写入 console.txt
  * @param text
@@ -78,10 +76,10 @@ function hasOrIsFolder(allPath) {
     return false;
 }
 
-
 // 开始逻辑部分
 writeConsole("---------------------------------------------------------");
 writeConsole(JSON.stringify(process.argv));
+
 
 if (!isVideoFile(videoName)) {
     writeConsole(`不是视频文件，不处理`);
@@ -102,7 +100,13 @@ writeConsole(`分辨为第${episode}集，开始下一步`);
 const renameText = fs.readFileSync(path.join(configPath, 'rename.txt'), 'utf-8');
 let isOk = false; // 是否匹配成功
 for (const line of renameText.split('\r\n')) {
-    const [name, binder, season = '01', difference = 0] = line.split(';');
+    let [name, binder, season, difference] = line.split(';');
+    if(season === ""){
+        season = "01"
+    }
+    if(difference === ""){
+        difference = 0
+    }
     // 如果文件名包含 name
     if (videoName.toLowerCase().includes(name.toLowerCase())) {
         isOk = true;

@@ -9,3 +9,7 @@
 2023/10/29 17:50:50: ["C:\\Program Files\\nodejs\\node.exe","D:\\code\\nodejs_rename_anime\\index.js","0","0","C:\\Users\\Administrator\\Desktop\\[LoliHouse] Undead Unluck - 06 [WebRip 1080p HEVC-10bit AAC ASSx2].mkv"]
 2023/10/29 17:50:52: 开始处理 [LoliHouse] Undead Unluck - 06 [WebRip 1080p HEVC-10bit AAC ASSx2].mkv
 2023/10/29 17:50:55: 分辨为第6集，开始下一步
+2023/10/29 22:34:54: ---------------------------------------------------------
+2023/10/29 22:34:54: ["C:\\Users\\Administrator\\AppData\\Roaming\\nvm\\v16.20.1\\node.exe","D:\\Code\\nodejs_rename_anime\\index.js","e3fa6c499482e5d5","1","D:/Aria2Download/《小不點》#3 (簡繁日内封字幕 日語原聲)【Ani-One Asia】.mp4"]
+2023/10/29 22:34:54: 开始处理 《小不點》#3 (簡繁日内封字幕 日語原聲)【Ani-One Asia】.mp4
+2023/10/29 22:34:54: 没有检测到集数，不处理
