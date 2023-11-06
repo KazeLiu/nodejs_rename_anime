@@ -1,10 +1,12 @@
 const fs = require('fs');
 const path = require('path');
+
 // 定义路径和变量
 const filePath = process.argv[process.argv.length - 1];
 const videoName = path.basename(filePath);
-const configPath = "D:\\Code\\nodejs_rename_anime"; // 如果console.txt和rename.txt的绝对路径
-const mediaPath = "E:\\follow anime";// 文件最终移动到的文件夹
+const configPath = "./"; // 如果console.txt和rename.txt都在这个文件夹内，这个就不用改
+const mediaPath = "D:\\result";// 文件最终移动到的文件夹
+
 /**
  * 定义函数以写入 console.txt
  * @param text
@@ -80,7 +82,6 @@ function hasOrIsFolder(allPath) {
 writeConsole("---------------------------------------------------------");
 writeConsole(JSON.stringify(process.argv));
 
-
 if (!isVideoFile(videoName)) {
     writeConsole(`不是视频文件，不处理`);
     return;
@@ -101,14 +102,33 @@ const renameText = fs.readFileSync(path.join(configPath, 'rename.txt'), 'utf-8')
 let isOk = false; // 是否匹配成功
 for (const line of renameText.split('\r\n')) {
     let [name, binder, season, difference] = line.split(';');
-    if(season === ""){
+    let nameList = [];
+    if (name.startsWith("[") && name.endsWith("]")) {
+        // 可能是数组表示
+        // 去掉开头和结尾的方括号，然后尝试解析为数组
+        const content = name.slice(1, -1).trim(); // 去掉方括号并去除首尾空格
+        try {
+            const arrayData = JSON.parse("[" + content + "]");
+            if (Array.isArray(arrayData)) {
+                nameList = arrayData
+            }else{
+                nameList = [name]
+            }
+        } catch (error) {
+            nameList = [name]
+        }
+    } else {
+        // 可能是纯文本
+        nameList = [name];
+    }
+    if (!season) {
         season = "01"
     }
-    if(difference === ""){
+    if (!difference) {
         difference = 0
     }
     // 如果文件名包含 name
-    if (videoName.toLowerCase().includes(name.toLowerCase())) {
+    if (nameList.some(item => videoName.toLowerCase().includes(item.toLowerCase()))) {
         isOk = true;
         writeConsole(`被匹配上，该条记录【${line}】`);
         // 如果有差值 则将差值相减 比如动漫是27集对应S02E02 那么difference写25 就是填第一季的最后一集的集数
@@ -123,12 +143,21 @@ for (const line of renameText.split('\r\n')) {
         let allPathHasFolder = hasOrIsFolder(allPath);
         if (allPathHasFolder) {
             let targetPath = path.join(allPath, new_filename);
-            writeConsole(`准备移动到 ${allPath}`);
-            fs.renameSync(filePath, targetPath)
-            writeConsole(`移动完毕，从${filePath}移动到${targetPath}`);
+            writeConsole(`开始复制，移动后路径与文件名【${targetPath}】，原路径为【${filePath}】`);
+            fs.copyFile(filePath, targetPath,(err)=>{
+                if (err) {
+                    writeConsole('发生错误:',err);
+                }
+                else {
+                    writeConsole(`复制完毕，开始删除原始文件`);
+                    fs.unlinkSync(filePath);
+                    writeConsole(`删除原始文件完毕`);
+                }
+            });
         }
+        break;
     }
 }
-if(!isOk){
+if (!isOk) {
     writeConsole(`${videoName} 没有被匹配上`);
 }
