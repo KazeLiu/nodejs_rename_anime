@@ -4,9 +4,8 @@ const path = require('path');
 // 定义路径和变量
 const filePath = process.argv[process.argv.length - 1];
 const videoName = path.basename(filePath);
-const configPath = "./"; // 如果console.txt和rename.txt都在这个文件夹内，这个就不用改
-const mediaPath = "D:\\result";// 文件最终移动到的文件夹
-
+const configPath = "C:\\Program Files\\aria2-1.36.0-win-64bit-build1"; // 如果console.txt和rename.txt的绝对路径
+const mediaPath = "E:\\follow anime";// 文件最终移动到的文件夹
 /**
  * 定义函数以写入 console.txt
  * @param text
@@ -139,7 +138,7 @@ for (const line of renameText.split('\r\n')) {
         const new_filename = `S${season}E${episode > 9 ? String(episode) : ('0' + episode)} - ${videoName}`;
         writeConsole(`重命名为 ${new_filename}`);
         // 合并目录 检测是否有目标是否有文件夹
-        let allPath = path.join(mediaPath, binder, Number(season) > 1 ? Number(season) : '');
+        let allPath = path.join(mediaPath, binder, Number(season) > 1 ? `S${season}` : '');
         let allPathHasFolder = hasOrIsFolder(allPath);
         if (allPathHasFolder) {
             let targetPath = path.join(allPath, new_filename);
@@ -151,9 +150,11 @@ for (const line of renameText.split('\r\n')) {
                 else {
                     writeConsole(`复制完毕，开始删除原始文件`);
                     fs.unlinkSync(filePath);
-                    writeConsole(`删除原始文件完毕`);
+                    writeConsole(`删除原始文件`);
                 }
             });
+        }else{
+            writeConsole(`路径创建错误:${allPath}`);
         }
         break;
     }
