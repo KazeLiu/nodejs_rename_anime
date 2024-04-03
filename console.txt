@@ -6,3 +6,38 @@
 2023/11/6 15:36:25: ["C:\\Program Files\\nodejs\\node.exe","D:\\code\\nodejs_rename_anime\\index.js","0","0","C:\\Users\\Administrator\\Desktop\\[LoliHouse] Undead Unluck - 06 [WebRip 1080p HEVC-10bit AAC ASSx2].mkv"]
 2023/11/6 15:36:25: 开始处理 [LoliHouse] Undead Unluck - 06 [WebRip 1080p HEVC-10bit AAC ASSx2].mkv
 2023/11/6 15:36:25: 分辨为第6集，开始下一步
+2023-10-29 08:01:54: ["C:\\Program Files\\nodejs\\node.exe","D:\\code\\nodejs_rename_anime\\index.js"]
+2023-10-29 08:01:54: 开始处理 [愛戀字幕社][4月新番][百合是我的工作！][watashi no Yuri wa oshigoto desu!][03][720P][MP4][BIG5][繁中].mp4
+2023-10-29 08:01:54: 分辨为第03集，开始下一步
+2023-10-29 08:01:54: 被匹配上，该条记录【Watashi no Yuri wa Oshigoto desu!;百合是我的工作;;25】
+2023-10-29 08:01:54: 重命名为 S01E03 - [愛戀字幕社][4月新番][百合是我的工作！][watashi no Yuri wa oshigoto desu!][03][720P][MP4][BIG5][繁中].mp4
+2023-10-29 08:01:54: 准备移动到 D:\result\百合是我的工作
+2023-10-29 08:01:54: 移动完毕，从D:/anime/[愛戀字幕社][4月新番][百合是我的工作！][watashi no Yuri wa oshigoto desu!][03][720P][MP4][BIG5][繁中].mp4移动到D:\result\百合是我的工作\S01E05 - [愛戀字幕社][4月新番][百合是我的工作！][watashi no Yuri wa oshigoto desu!][30][720P][MP4][BIG5][繁中].mp4
+2024/4/3 14:54:59: ---------------------------------------------------------
+2024/4/3 14:54:59: ["C:\\Program Files\\nodejs\\node.exe","D:\\code\\nodejs_rename_anime\\index.js","0","0","C:\\Users\\Administrator\\Desktop\\[LoliHouse] Undead Unluck - 06 [WebRip 1080p HEVC-10bit AAC ASSx2].mkv"]
+2024/4/3 14:54:59: 开始处理 [LoliHouse] Undead Unluck - 06 [WebRip 1080p HEVC-10bit AAC ASSx2].mkv
+2024/4/3 14:54:59: 分辨为第6集，开始下一步
+2024/4/3 14:54:59: [LoliHouse] Undead Unluck - 06 [WebRip 1080p HEVC-10bit AAC ASSx2].mkv 没有被匹配上
+2024/4/3 14:55:11: ---------------------------------------------------------
+2024/4/3 14:55:11: ["C:\\Program Files\\nodejs\\node.exe","D:\\code\\nodejs_rename_anime\\index.js","0","0","C:\\Users\\Administrator\\Desktop\\[LoliHouse] Undead Unluck - 06 [WebRip 1080p HEVC-10bit AAC ASSx2].mkv"]
+2024/4/3 14:55:11: 开始处理 [LoliHouse] Undead Unluck - 06 [WebRip 1080p HEVC-10bit AAC ASSx2].mkv
+2024/4/3 14:55:11: 分辨为第6集，开始下一步
+2024/4/3 14:55:11: [LoliHouse] Undead Unluck - 06 [WebRip 1080p HEVC-10bit AAC ASSx2].mkv 没有被匹配上
+2024/4/3 15:33:48: 开始遍历下载列表
+2024/4/3 15:33:48: 正在查看葬送的芙莉莲的第23集，搜索关键词拼接为： 葬送的芙莉莲 lolihouse 23
+2024/4/3 15:34:00: 开始遍历下载列表
+2024/4/3 15:34:00: 正在查看葬送的芙莉莲的第23集，搜索关键词拼接为： 葬送的芙莉莲 lolihouse 23
+2024/4/3 15:34:56: 开始遍历下载列表
+2024/4/3 15:34:56: 正在搜索 葬送的芙莉莲 的第 23 集，搜索关键词拼接为：葬送的芙莉莲 lolihouse 23
+2024/4/3 15:36:30: 开始遍历下载列表
+2024/4/3 15:36:30: 正在搜索 葬送的芙莉莲 的第 23 集，搜索关键词拼接为：葬送的芙莉莲 lolihouse 23
+2024/4/3 15:36:37: 检索到 葬送的芙莉莲 已发布第 23 集，开始发送给aria2
+2024/4/3 15:36:42: [喵萌奶茶屋&LoliHouse] 葬送的芙莉莲 / Sousou no Frieren - 23 [WebRip 1080p HEVC-10bit AAC][简繁日内封字幕] 推送失败！
+2024/4/3 15:38:01: 开始遍历下载列表
+2024/4/3 15:38:01: 正在搜索 葬送的芙莉莲 的第 23 集，搜索关键词拼接为：葬送的芙莉莲 lolihouse 23
+2024/4/3 15:38:04: 检索到 葬送的芙莉莲 已发布第 23 集，开始发送给aria2
+2024/4/3 15:38:56: [喵萌奶茶屋&LoliHouse] 葬送的芙莉莲 / Sousou no Frieren - 23 [WebRip 1080p HEVC-10bit AAC][简繁日内封字幕] 推送失败！
+2024/4/3 15:51:02: 开始遍历下载列表
+2024/4/3 15:51:02: 正在搜索 葬送的芙莉莲 的第 23 集，搜索关键词拼接为：葬送的芙莉莲 lolihouse 23
+2024/4/3 15:51:05: 检索到 葬送的芙莉莲 已发布第 23 集，开始发送给aria2
+2024/4/3 15:51:05: [喵萌奶茶屋&LoliHouse] 葬送的芙莉莲 / Sousou no Frieren - 23 [WebRip 1080p HEVC-10bit AAC][简繁日内封字幕] 已推送

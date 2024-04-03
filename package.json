@@ -2,7 +2,10 @@
   "name": "nodejs_rename_anime",
   "version": "1.0.0",
   "dependencies": {
-    "express": "^4.18.2"
+    "axios": "^1.6.8",
+    "express": "^4.18.2",
+    "tunnel": "^0.0.6",
+    "xml2js": "^0.6.2"
   },
   "scripts": {
     "build": "webpack --config webpack.config.js"
