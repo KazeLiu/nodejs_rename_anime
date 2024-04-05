@@ -152,7 +152,6 @@ function init() {
         }
         // 如果文件名包含 name
         if (nameList.some(item => videoName.toLowerCase().includes(item.toLowerCase()))) {
-            debugger
             isOk = true;
             writeConsole(`被匹配上，该条记录【${line}】`);
             // 如果有差值 则将差值相减 比如动漫是27集对应S02E02 那么difference写25 就是填第一季的最后一集的集数
