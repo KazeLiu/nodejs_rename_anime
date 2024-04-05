@@ -115,6 +115,7 @@ async function init() {
     // 读取 rename.txt 文件和数据
     for (const line of downloadText.split('\r\n')) {
         if (line.startsWith('#')) continue;
+        if (line === "") continue;
         let [name, searchKeyWord, episode] = line.split(';');
         if (!episode) episode = 1
         let searchEpisode = String(episode > 10 ? String(episode) : String('0' + episode));
