@@ -116,13 +116,15 @@ async function init() {
     for (const line of downloadText.split('\r\n')) {
         if (line.startsWith('#')) continue;
         let [name, searchKeyWord, episode] = line.split(';');
-        if (!name) continue;
         if (!episode) episode = 1
-        writeConsole(`正在搜索 ${name} 的第 ${episode} 集，搜索关键词拼接为：${searchKeyWord} ${episode}`);
-        let dataInfo = await getXML(`https://dmhy.anoneko.com/topics/rss/rss.xml?keyword=${searchKeyWord} ${episode}`);
-        writeConsole(`检索到 ${name} 已发布第 ${episode} 集，开始发送给aria2`);
+        let searchEpisode = String(episode > 10 ? String(episode) : String('0' + episode));
+        writeConsole(`正在搜索 ${name} 的第 ${episode} 集，搜索关键词拼接为：${searchKeyWord} ${searchEpisode}`);
+        let dataInfo = await getXML(`https://dmhy.anoneko.com/topics/rss/rss.xml?keyword=${searchKeyWord} ${searchEpisode}`);
         if (dataInfo) {
+            writeConsole(`检索到 ${name} 已发布第 ${episode} 集，开始发送给aria2`);
             await sendLinkToRPC(dataInfo.name, dataInfo.magnet);
+        } else {
+            writeConsole(`没有查询到结果，建议搜索关键词`);
         }
     }
 }
