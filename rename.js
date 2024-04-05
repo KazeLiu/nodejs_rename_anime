@@ -5,7 +5,7 @@ const path = require('path');
 const filePath = process.argv[process.argv.length - 1];
 const videoName = path.basename(filePath);
 const configPath = __dirname; // console.txt和rename.txt的路径 就在当前文件夹
-const mediaPath = "D:\\follow anime";// 文件最终移动到的文件夹
+const mediaPath = "E:\\追番";// 文件最终移动到的文件夹
 /**
  * 定义函数以写入 console.txt
  * @param text
@@ -89,8 +89,8 @@ function changeDownloadEpisode(name, newEpisode) {
         if (line.startsWith('#')) return line;
         let [downloadName, searchKeyWord, episode] = line.split(';');
         if (downloadName === name) {
-            episode = newEpisode ? newEpisode : 1;
-            return `${downloadName};${searchKeyWord};${episode}`;
+            writeConsole(`修改download.txt中的 ${downloadName} 集数，从${episode}修改为${episode + 1}`);
+            return `${downloadName};${searchKeyWord};${newEpisode ? newEpisode : 1}`;
         }
         return line;
     });
@@ -174,7 +174,6 @@ function init() {
                     } else {
                         // 下载完毕后，将download.txt内的同名文件的集数加1
                         changeDownloadEpisode(name, episode + 1);
-                        writeConsole(`修改download.txt中的 ${name} 集数，从${episode}修改为${episode + 1}`);
                         writeConsole(`复制完毕，开始删除原始文件`);
                         fs.unlinkSync(filePath);
                         writeConsole(`删除原始文件`);
