@@ -9,11 +9,11 @@ const proxy = {
     port: 7890,  // 这里换成你的代理服务器端口
 } // 不需要就删掉括号里面的
 const rpcBaseData = {
-    domain: 'http://127.0.0.1', // PRC主机
+    domain: 'http://192.168.2.222', // PRC主机
     port: '6800', // RPC端口
     path: '/jsonrpc', // RPC路径
-    key: '', // RPC密钥
-    dir: 'D:\\Download\\aria2-1.37.0-win-64bit-build1\\download', // 保存路径
+    token: 'so3nu5zbtftulcw3mvr1t1kl7b3eelvw', // RPC密钥
+    dir: 'D:\\Aria2Download', // 保存路径
 }
 
 /**
@@ -116,6 +116,8 @@ async function init() {
     for (const line of downloadText.split('\r\n')) {
         if (line.startsWith('#')) continue;
         let [name, searchKeyWord, episode] = line.split(';');
+        if (!name) continue;
+        if (!episode) episode = 1
         writeConsole(`正在搜索 ${name} 的第 ${episode} 集，搜索关键词拼接为：${searchKeyWord} ${episode}`);
         let dataInfo = await getXML(`https://dmhy.anoneko.com/topics/rss/rss.xml?keyword=${searchKeyWord} ${episode}`);
         writeConsole(`检索到 ${name} 已发布第 ${episode} 集，开始发送给aria2`);

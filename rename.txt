@@ -1,2 +1,9 @@
-[SPY×FAMILY,SPYxFAMILY,Spy x Family];间谍过家家;02;25
-Watashi no Yuri wa Oshigoto desu!;百合是我的工作;;25
+# 种子内带的名字;tmdb或者imdb刮削的名字;第几季;偏移量（有些动漫分两季，第一季24集，然后第二季的第一集在刮削器里面是[S02E01]，但是种子内的集数是25集开始算，那么填24，就是填上季的最后一集的总集数）
+Kono Subarashii Sekai ni Shukufuku wo!;为美好的世界献上祝福!;03
+Shuumatsu Train Doko e Iku;终末列车要开往哪里？;
+Jellyfish Can't Swim in the Night;夜晚的水母不会游泳;
+Spice and Wolf;狼与香辛料 行商邂逅贤狼;
+Blue Archive The Animation;蔚蓝档案 The Animation;
+搖曳露營△;摇曳露营△;03
+Hibike! Euphonium;吹响吧！上低音号;03
+Date a Live;约会大作战;05
