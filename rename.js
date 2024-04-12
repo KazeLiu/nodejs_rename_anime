@@ -85,16 +85,20 @@ function changeDownloadEpisode(name, newEpisode) {
     const downloadText = fs.readFileSync(path.join(configPath, 'download.txt'), 'utf-8');
     // 读取 rename.txt 文件和数据
     let downloadTextLines = downloadText.split('\r\n');
+    let hasMatchedName = false;
     downloadTextLines = downloadTextLines.map(line => {
         if (line.startsWith('#')) return line;
-        let [downloadName, searchKeyWord, episode] = line.split(';');
+        let [downloadName, episode] = line.split(';');
         if (downloadName === name) {
-            writeConsole(`修改download.txt中的 ${downloadName} 集数，从${episode}修改为${episode + 1}`);
-            return `${downloadName};${searchKeyWord};${newEpisode ? newEpisode : 1}`;
+            hasMatchedName = true;
+            writeConsole(`修改download.txt中的 ${downloadName} 集数，从${episode}修改为${newEpisode}`);
+            return `${downloadName};${newEpisode ? newEpisode : 1}`;
         }
         return line;
     });
-
+    if (!hasMatchedName) {
+        console.log(`未匹配 ${name} 对应的名称`);
+    }
     fs.writeFileSync(path.join(configPath, 'download.txt'), downloadTextLines.join('\r\n'), 'utf-8');
 }
 
@@ -173,7 +177,7 @@ function init() {
                         writeConsole('发生错误:', err);
                     } else {
                         // 下载完毕后，将download.txt内的同名文件的集数加1
-                        changeDownloadEpisode(name, episode + 1);
+                        changeDownloadEpisode(binder, episode);
                         writeConsole(`复制完毕，开始删除原始文件`);
                         fs.unlinkSync(filePath);
                         writeConsole(`删除原始文件`);
